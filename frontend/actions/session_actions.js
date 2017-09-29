@@ -1,5 +1,6 @@
 import * as SessionAPIUtil from '../util/session_api_util';
 
+//constants
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
@@ -16,7 +17,6 @@ export const receiveErrors = errors => ({
 });
 
 //async actions
-
 export const signup = user => dispatch => (
   SessionAPIUtil.signup(user).then(user => (
     dispatch(receiveCurrentUser(user))
@@ -34,7 +34,7 @@ export const login = user => dispatch => (
 );
 
 export const logout = () => dispatch => (
-  SessionAPIUtil.logout().then(user => (
+  SessionAPIUtil.logout().then(() => (
     dispatch(receiveCurrentUser(null))
   ))
 );
