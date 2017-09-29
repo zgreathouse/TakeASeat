@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 
+//reducers
 import sessionReducer from './session_reducer';
 import errorsReducer from './errors_reducer';
 
