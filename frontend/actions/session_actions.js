@@ -2,7 +2,8 @@ import * as SessionAPIUtil from '../util/session_api_util';
 
 //constants
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 
 //sync actions
@@ -12,8 +13,13 @@ export const receiveCurrentUser = currentUser => ({
 });
 
 export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_SESSION_ERRORS,
   errors,
+});
+
+export const clearErrors = errors => ({
+  type: CLEAR_ERRORS,
+  errors
 });
 
 //async actions
