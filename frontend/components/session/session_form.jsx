@@ -85,4 +85,4 @@ class SessionForm extends Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
